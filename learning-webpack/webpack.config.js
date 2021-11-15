@@ -23,6 +23,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+      },
     ],
   },
   plugins: [
@@ -31,3 +35,9 @@ module.exports = {
     }),
   ],
 };
+
+/**
+ * The order of loaders is important.
+ * They’re evaluated in reverse order — that is, from right to left and from bottom to top.
+ * In our case, the css-loader is evaluated first, followed by the style-loader.
+ */
