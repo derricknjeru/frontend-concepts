@@ -9,6 +9,17 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "deploy"),
   },
+  /**
+   * This tells webpack-dev-server to serve the files from the deploy directory
+   * and to open the entry page automatically.
+   */
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "deploy"),
+    },
+    open: true,
+    port: 9000,
+  },
   module: {
     rules: [
       {
@@ -26,6 +37,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+      },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: "asset/resource",
       },
     ],
   },
