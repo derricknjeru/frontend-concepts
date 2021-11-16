@@ -1,11 +1,12 @@
 const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
     main: path.resolve(__dirname, "./app/app.ts"),
   },
   output: {
-    filename: "[name].bundle.js",
+    filename: "bundle.js",
     path: path.resolve(__dirname, "deploy"),
   },
   /**
@@ -14,22 +15,22 @@ module.exports = {
    */
   devServer: {
     static: {
-      directory: path.join(__dirname, "deploy"),
+      directory: path.join(__dirname,'deploy'),
     },
     open: true,
     port: 9000,
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
-      }
-    ]
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+    ],
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [".tsx", ".ts", ".js"],
   },
 };
