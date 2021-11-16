@@ -1,7 +1,25 @@
+const path = require("path");
+
 module.exports = {
-  entry: './app/app.ts',
+  entry: {
+    main: path.resolve(__dirname, "./app/app.ts"),
+  },
+  output: {
+    filename: "[name].bundle.js",
+    path: path.resolve(__dirname, "deploy"),
+  },
+  /**
+   * This tells webpack-dev-server to serve the files from the deploy directory
+   * and to open the entry page automatically.
+   */
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "deploy"),
+    },
+    open: true,
+    port: 9000,
+  },
   devtool: 'inline-source-map',
-  mode: 'development',
   module: {
     rules: [
       {
@@ -14,10 +32,4 @@ module.exports = {
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ]
   },
-  output: {
-    filename: 'bundle.js'
-  },
-  devServer: {
-    inline: false
-  }
 };
