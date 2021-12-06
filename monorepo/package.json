@@ -1,6 +1,10 @@
-{ "name": "mono",
+{
+  "name": "mono",
   "private": true,
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "devDependencies": {
+    "lage": "^1.1.4"
+  }
 }
