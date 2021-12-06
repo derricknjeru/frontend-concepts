@@ -1,6 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
+exports.__esModule = true;
 var whatYourName = function (text) {
-    console.log("My name is " + text);
+    console.log("My name is ".concat(text));
 };
-exports.default = whatYourName;
+exports["default"] = whatYourName;
