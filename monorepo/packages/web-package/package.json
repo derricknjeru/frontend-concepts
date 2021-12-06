@@ -1,8 +1,15 @@
 {
   "name": "web",
   "version": "1.0.0",
+  "scripts": {
+    "start": "Starting application",
+    "build": "node index.js"
+  },
   "dependencies": {
-    "lodash": "4.17.21",
     "backend": "1.0.0"
+  },
+  "devDependencies": {
+    "lodash": "4.17.21",
+    "typescript": "4.5.2"
   }
 }
