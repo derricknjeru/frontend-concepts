@@ -1474,7 +1474,7 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-lage@^1.1.4:
+lage@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/lage/-/lage-1.1.4.tgz#36cd8c8bbbba6b6d71dad04dbc9e0d6ea3216439"
   integrity sha512-vbplWjvHTuIozgxS7EE3WeswgZIL+pN3I9wt7jilMDdzrc2kbnyLVxLrfJshoc9pdkbLIFJvbHfe6p1qHH9ubQ==

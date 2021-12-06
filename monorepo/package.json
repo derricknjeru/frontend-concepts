@@ -4,7 +4,12 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "build": "lage build",
+    "test": "lage test",
+    "lage": "lage"
+  },
   "devDependencies": {
-    "lage": "^1.1.4"
+    "lage": "1.1.4"
   }
 }
