@@ -3,24 +3,24 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: path.resolve(__dirname, "./app/app.ts"),
+    main: path.resolve(__dirname, "./deploy/js/app.js"),
   },
-  output: {
+  /*output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "deploy"),
-  },
+  },*/
   /**
    * This tells webpack-dev-server to serve the files from the deploy directory
    * and to open the entry page automatically.
    */
   devServer: {
     static: {
-      directory: path.join(__dirname,'deploy'),
+      directory: path.join(__dirname, "deploy"),
     },
     open: true,
     port: 9000,
   },
-  devtool: "inline-source-map",
+  /*devtool: "inline-source-map",
   module: {
     rules: [
       {
@@ -32,5 +32,5 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
-  },
+  },*/
 };
