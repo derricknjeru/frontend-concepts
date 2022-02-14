@@ -2,7 +2,9 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "removeComments": true,
-    "module": "commonjs"
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "traceResolution": true
   },
   "files": ["./app.ts"]
 }
