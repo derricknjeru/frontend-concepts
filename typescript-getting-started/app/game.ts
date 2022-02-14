@@ -3,6 +3,8 @@
 /// <reference path="player.ts" />
 /// <reference path="scoreboard.ts" />
 
+
+
 class Game {
   private scoreboard: ScoreBoard = new ScoreBoard();
 
